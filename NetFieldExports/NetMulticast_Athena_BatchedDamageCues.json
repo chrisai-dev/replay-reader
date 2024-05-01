@@ -1,0 +1,65 @@
+{
+  "path": [
+    "/Script/FortniteGame.FortPawn:NetMulticast_Athena_BatchedDamageCues"
+  ],
+  "customExportName": "BatchedDamageCues",
+  "exportGroup": "gameData",
+  "exportName": "damageCues",
+  "parseLevel": 2,
+  "properties": {
+    "HitActor": {
+      "name": "HitActor",
+      "type": "int",
+      "parseFunction": "readIntPacked",
+      "parseType": "default"
+    },
+    "Magnitude": {
+      "name": "Magnitude",
+      "type": "float",
+      "parseFunction": "readFloat32",
+      "parseType": "default"
+    },
+    "bIsFatal": {
+      "name": "bIsFatal",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsCritical": {
+      "name": "bIsCritical",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsShield": {
+      "name": "bIsShield",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsShieldDestroyed": {
+      "name": "bIsShieldDestroyed",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsShieldApplied": {
+      "name": "bIsShieldApplied",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsBallistic": {
+      "name": "bIsBallistic",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
+    "bIsBeam": {
+      "name": "bIsBeam",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    }
+  }
+}
