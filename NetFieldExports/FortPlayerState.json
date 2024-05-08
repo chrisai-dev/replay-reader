@@ -43,6 +43,12 @@
       "parseFunction": "readBit",
       "parseType": "default"
     },
+    "bIsAnAthenaGameParticipant": {
+      "name": "bIsAnAthenaGameParticipant",
+      "type": "boolean",
+      "parseFunction": "readBit",
+      "parseType": "default"
+    },
     "DeathCause": {
       "name": "DeathCause",
       "type": "EDeathCause",

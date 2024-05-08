@@ -2,6 +2,8 @@ const handlePlayerPawn = require("./handlePlayerPawn");
 
 const onlySpectatingPlayers = [];
 
+const nonPlayerCharacters = [];
+
 const handleQueuedPlayerPawns = (stateChIndex, states, globalData) => {
   const actorId = globalData.channelToActor[stateChIndex];
 
@@ -36,6 +38,15 @@ const handlePlayerState = ({ chIndex, data, states, result, globalData, changedP
     return;
   }
 
+  if (data.bIsAnAthenaGameParticipant === false) {
+    nonPlayerCharacters.push(chIndex);
+    return;
+  }
+
+  if (nonPlayerCharacters.includes(chIndex)) {  
+    return;
+  }
+  
   let playerData = states.players[chIndex];
 
   let newPlayer = false;
