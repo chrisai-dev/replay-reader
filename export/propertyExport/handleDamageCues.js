@@ -10,15 +10,13 @@ const handleDamageCues = ({
     
     if (!stateChannel) return;
 
-    const DamageSrcPlayerName = players[stateChannel].PlayerNamePrivate;
-
     for (const player in players) {
         if (players[player].Instigator !== data.HitActor || data.Magnitude === 0) continue;
 
         result.gameData.damageCues.push({
             timeSeconds: timeSeconds,
-            damageSourcePlayer: DamageSrcPlayerName,
-            damageTargetPlayer: players[player].PlayerNamePrivate,
+            damageSourcePlayer: players[stateChannel].UniqueID || players[stateChannel].BotUniqueId,
+            damageTargetPlayer: players[player].UniqueID || players[player].BotUniqueId,
             damageMagnitude: data.Magnitude,
             bIsFatal: data.bIsFatal,
             bIsCritical: data.bIsCritical,
